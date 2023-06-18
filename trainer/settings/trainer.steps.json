@@ -5,13 +5,28 @@
         "hasScript"     :   true
     },
     {
+        "filename"      :   "step0",
+        "score"         :   20,
+        "hasScript"     :   true
+    },
+    {
         "filename"      :   "step1",
-        "score"         :   50,
+        "score"         :   20,
         "hasScript"     :   true
     },
     {
         "filename"      :   "step2",
-        "score"         :   50,
+        "score"         :   20,
+        "hasScript"     :   true
+    },
+    {
+        "filename"      :   "step3",
+        "score"         :   20,
+        "hasScript"     :   true
+    },
+    {
+        "filename"      :   "step4",
+        "score"         :   20,
         "hasScript"     :   true
     },
     {

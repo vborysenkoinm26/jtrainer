@@ -1,7 +1,6 @@
 {
     "LANGUAGES": {
 		"ua": "Українська",
-        "ru": "Русский",
         "en": "English"
     },
     "DEFAULT_LANG": "ua",

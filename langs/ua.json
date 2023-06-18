@@ -1,7 +1,35 @@
 {
     "local": "Українська",
     "lang": {
-        "TRAINER_NAME": "Назва тренажера",
+        "TRAINER_NAME": "Оптимізоване сортування бульбашкою",
+        "BUBBLE_SORT": "Оптимізоване сортування бульбашкою",
+        "SWAP_TITLE": "Перестановка",
+        "SWAP_CHANGE_ELEMENTS": "Обміняйте місцями два елементи (A > B)",
+        "SWAP_ELEMENTS": "Елементи",
+        "SWAP_PAIR": "Обмін",
+        "BUBBLE_SORT_ALGORITHM": "Оптимізоване сортування бульбашкою (Optimized Bubble Sort) є модифікацією звичайного алгоритму сортування бульбашкою. В основному, воно використовується для покращення продуктивності шляхом зменшення кількості зайвих проходів по списку.",
+        "BUBBLE_SORT_ALGORITHM_0":  "Основна ідея оптимізованого сортування бульбашкою полягає в тому, що після кожного проходу найбільший незайнятий елемент масиву встановлюється на правильній позиції. Це означає, що ми можемо скоротити довжину наступного проходу, оскільки на кінці масиву знаходиться вже відсортований елемент.",
+        "BUBBLE_SORT_ALGORITHM_1":  "Реалізація алгоритму:",
+        "BUBBLE_SORT_ALGORITHM_2":  "procedure bubbleSort(arr)",
+        "BUBBLE_SORT_ALGORITHM_3":  "&nbsp;&nbsp;&nbsp;&nbsp;len := length(arr)",
+        "BUBBLE_SORT_ALGORITHM_4":  "&nbsp;&nbsp;&nbsp;&nbsp;swapped := true",
+        "BUBBLE_SORT_ALGORITHM_5":  "&nbsp;&nbsp;&nbsp;&nbsp;while swapped do",
+        "BUBBLE_SORT_ALGORITHM_6":  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swapped := false",
+        "BUBBLE_SORT_ALGORITHM_7":  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i := 0 to len - 2 do",
+        "BUBBLE_SORT_ALGORITHM_8":  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if arr[i] > arr[i + 1] then",
+        "BUBBLE_SORT_ALGORITHM_9":  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(arr[i], arr[i + 1])",
+        "BUBBLE_SORT_ALGORITHM_10": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swapped := true",
+        "BUBBLE_SORT_ALGORITHM_11": "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;len := len - 1",
+        "BUBBLE_SORT_ALGORITHM_12": "&nbsp;&nbsp;&nbsp;&nbsp;end while",
+        "BUBBLE_SORT_ALGORITHM_13": "&nbsp;&nbsp;&nbsp;&nbsp;return arr",
+        "BUBBLE_SORT_ALGORITHM_14": "end procedure",
+        "BUBBLE_SORT_ALGORITHM_15": "Цей алгоритм використовує змінну swapped, щоб відстежувати, чи відбуваються обміни елементів під час кожного проходу. Якщо жодних обмінів не відбулося, то swapped залишається false, і ми завершуємо сортування. Зменшення len після кожного проходу допомагає скоротити довжину наступного проходу, оскільки найбільший елемент вже знаходиться на правильній позиції.",
+        "BUBBLE_SORT_ALGORITHM_16": "Цей алгоритм може бути використаний для сортування масивів або списків будь-якого типу, які підтримують порівняння та обмін елементів.",
+        "BUBBLE_SORT_HINT": "Знайдіть в масиві елементів пару сусідніх значень задовільняючих умові A > B і перемістіть їх в поле Обмін.",
+        
+        
+        
+        
         "MAX_SCORE": "Кількість балів",
         "NEXT_STEP": "Наступний крок",
         "PREV_STEP": "Попередній крок",
@@ -25,24 +53,9 @@
 		"CHECK": "Перевірити",
 		"ATTEMPTS_LEFT": "Ще спроб - ",
 		
-		"RADIO_TEXT_1": "Радіо №1",
-		"RADIO_TEXT_2": "Радіо №2",
-		"RADIO_TEXT_3": "Радіо №3",
-		"RADIO_TEXT_4": "Радіо №4 (правильний)",
 		
 		"CHECKBOX1": "Правильна відповідь",
 		"CHECKBOX2": "Неправильна відповідь",
-		
-        "ELEMENTSTEST_OPTION_ONE": "Елемент 1",
-        "ELEMENTSTEST_OPTION_TWO": "Елемент 2",
-        "ELEMENTSTEST_OPTION_THREE": "Елемент 3 (правильний)",
-        "ELEMENTSTEST_TITLE": "Перевірка елементів...",
-        "ELEMENTSTEST_CHOOSE_WRITE_OPTION": "Оберіть правильний елемент зі списку",
-        "ELEMENTSTEST_ENTER_TEST": "Введіть в поле текст 'test' и 'Text' через кому",
-        "ELEMENTSTEST_PUT_DROPPABLE": "Перетягніть відповіді 1 та 4",
-		"ELEMENTSTEST_PUT_INPUT1": "Введіть числа 1 АБО 4",
-		"ELEMENTSTEST_ENTER_FLOAT_NUMBER": "Введіть 4.5 або 4,5",
-        "LATEX_TEXT": "Рівняння для загальної теорії відносності, сформульоване Альбертом Ейнштейном. (LateX)",
 
         "RESULTS_TITLE": "Ваші результати",
         "RESULTS_START_TIME": "Час початку тестування",
@@ -52,8 +65,11 @@
         "RESULTS_YOUR_SCORE": "Ви отримали",
 
         "STEP1_NAME": "Вступ",
-        "STEP2_NAME": "Крок 1",
-        "STEP3_NAME": "Крок 2",
-        "STEP4_NAME": "Результати"
+        "STEP2_NAME": "Алгоритм",
+        "STEP3_NAME": "Крок 1",
+        "STEP4_NAME": "Крок 2",
+        "STEP5_NAME": "Крок 3",
+        "STEP6_NAME": "Крок 4",
+        "STEP7_NAME": "Результати"
     }
 }
