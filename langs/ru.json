@@ -1,0 +1,61 @@
+{
+    "local": "Русский",
+    "lang": {
+        "TRAINER_NAME": "Название тренажера",
+        "MAX_SCORE": "Количество баллов",
+        "NEXT_STEP": "Следующий шаг",
+        "PREV_STEP": "Предыдущий шаг",
+        "ENTER_TEXT": "Введите текст",
+        "CHOOSE_LANG": "Выберите язык",
+        "CHOOSE_SELECT": "Выберите элемент из списка",
+		"TEACHER_HELP" : "Помощь преподавателя",
+		"ENTER_HELP_TEXT": "Опишите с чем Вам нужна помощь...",
+		"HELP_REQUEST_SEND": "Отправить",
+		"HELP_REQUEST_CLOSE": "Отмена",
+		"CALCULATOR" : "Калькулятор",
+		"ALERT_WELL_DONE": "Отлично!",
+		"ALERT_FAIL": "Плохо!",
+		"ALERT_STEP_SUCCESS": " Шаг пройден! Перейдите к следующему.",
+		"ALERT_STEP_FAIL": " Шаг провален. Перейдите к следующему.",
+		"STEP_COUNT": "Количество шагов",
+        "END_TRAINER": "Завершить сеанс",
+        "END_ARE_YOU_SURE": "Вы уверены, что хотите завершить выполнение тренажера?",
+        "END_TRAINER_CLOSE": "Продолжить текущий сеанс",
+        "END_TRAINER_SEND": "Завершить текущий сеанс",
+		"CHECK": "Проверить",
+		"ATTEMPTS_LEFT": "Еще попыток - ",
+		
+		"RADIO_TEXT_1": "Радио №1",
+		"RADIO_TEXT_2": "Радио №2",
+		"RADIO_TEXT_3": "Радио №3",
+		"RADIO_TEXT_4": "Радио №4 (правильный)",
+		
+		"CHECKBOX1": "Правильный ответ",
+		"CHECKBOX2": "Неправильный ответ",
+		
+        "ELEMENTSTEST_OPTION_ONE": "Элемент 1",
+        "ELEMENTSTEST_OPTION_TWO": "Элемент 2",
+        "ELEMENTSTEST_OPTION_THREE": "Элемент 3 (правильный)",
+        "ELEMENTSTEST_TITLE": "Проверка некоторых элементов...",
+        "ELEMENTSTEST_CHOOSE_WRITE_OPTION": "Выберите правильный элемент из списка",
+        "ELEMENTSTEST_ENTER_TEST": "Введите в поле текст 'test' и 'Text' через запятую",
+        "ELEMENTSTEST_PUT_DROPPABLE": "Перетащите ответы 1 и 4",
+		"ELEMENTSTEST_PUT_INPUT1": "Введите числа 1 ИЛИ 4",
+		"ELEMENTSTEST_ENTER_FLOAT_NUMBER": "Введите 4.5 или 4,5",
+		"LATEX_TEXT": "Уравнение для общей теории относительности, сформулированное Альбертом Эйнштейном. (LateX)",
+		
+
+        "RESULTS_TITLE": "Ваши результаты",
+        "RESULTS_START_TIME": "Время начала тестирования",
+        "RESULTS_END_TIME": "Время окончания тестирования",
+        "RESULTS_TIME_DIFF": "Время выполнения",
+        "RESULTS_TIME_SEC": "сек.",
+        "RESULTS_YOUR_SCORE": "Вы набрали",
+		"STEP": "Шаг",
+
+        "STEP1_NAME": "Вступление",
+        "STEP2_NAME": "Шаг 1",
+        "STEP3_NAME": "Результаты"
+
+    }
+}

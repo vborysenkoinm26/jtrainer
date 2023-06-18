@@ -1,0 +1,45 @@
+<div id="myCalc">
+    <div id="close"><span>&times;</span></div>
+    <div id="answer"><span id="expr"></span><span id="myAns"></span><span id="total"></span></div>
+    <div id="buttons">
+        <a id="sin" class="advancedOptions" onclick="trigo('sin')">sin</a>
+        <a id="cos" class="advancedOptions" onclick="trigo('cos')">cos</a>
+        <a id="tan" class="advancedOptions" onclick="trigo('tan')">tan</a>
+        <a id="ln" class="advancedOptions" onclick="log(0)">ln</a>
+        <a id="log" class="advancedOptions" onclick="log(1)">log</a>
+        <a id="fact" class="advancedOptions" onclick="input('!')">n!</a>
+        <a id="pow" class="advancedOptions" onclick="input('^(')">^</a>
+        <a id="sqrt" class="advancedOptions" onclick="sqrt()">&radic;</a>
+        <a id="pi" class="options" onclick="piOrE('pi')">&pi;</a>
+        <a id="exp" class="options" onclick="piOrE('e')">e</a>
+        <a id="leftBracket" class="advancedOptions" onclick="leftParen()">(</a>
+        <a id="rightBracket" class="advancedOptions" onclick="input(')')">)</a>
+        <a id="clear" class="options" onclick="ac()">CE</a>
+        <a id="backspace" class="options" onclick="del()">&#129104;</a>
+        <a id="div" class="options" onclick="multOrDiv('div')">&divide;</a>
+        <a id ="7" class="number" onclick="input('7')">7</a>
+        <a id ="8" class="number" onclick="input('8')">8</a>
+        <a id ="9" class="number" onclick="input('9')">9</a>
+        <a id="mul" class="options" onclick="multOrDiv('mult')">&times;</a>
+        <a id ="4" class="number" onclick="input('4')">4</a>
+        <a id ="5" class="number" onclick="input('5')">5</a>
+        <a id ="6" class="number" onclick="input('6')">6</a>
+        <a id="minus" class="options" onclick="input('-')">&minus;</a>
+        <a id ="1" class="number" onclick="input('1')">1</a>
+        <a id ="2" class="number" onclick="input('2')">2</a>
+        <a id ="3" class="number" onclick="input('3')">3</a>
+        <a id="plus" class="options" onclick="input('+')">+</a>
+        <a id ="0" class="number" onclick="input('0')">0</a>
+        <a id ="dot" class="number" onclick="input('.')">.</a>
+        <a id="equal" class="options" onclick="equal()">=</a>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#close').click(function() {
+        $('div.calculator').css('display', 'none');
+    });
+</script>
+<script type="text/javascript">
+    var url = '/cdn/javascripts/jtrainer/current/js/HistrixCalculator.js';
+    $.getScript(url);
+</script>

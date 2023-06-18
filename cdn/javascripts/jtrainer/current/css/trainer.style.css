@@ -1,0 +1,262 @@
+html {
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.modal-static {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    margin-top: -100px;
+    margin-left: -100px;
+    overflow: visible !important;
+
+}
+
+.modal-static,
+.modal-static .modal-dialog,
+.modal-static .modal-content {
+    width: 170px;
+    height: 170px;
+}
+
+.modal-static .modal-dialog,
+.modal-static .modal-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.form-control {
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+body {
+    background-image: url("/cdn/javascripts/jtrainer/current/img/trainer/trainer-background.png");
+    height: 100%;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.navbar-brand {
+    color: #efc84a !important;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand .trainer-brand {
+    background: url("/cdn/javascripts/jtrainer/current/img/trainer/trainer-brand.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 191px;
+    height: 50px;
+    margin: 0 10px 0 0;
+}
+
+.navbar-brand:hover {
+    color: #d14f3a !important;
+}
+
+section.stepspace {
+    margin: 0 20px;
+}
+
+div.step {
+    display: none;
+    z-index: 0;
+}
+
+div.step.current {
+    display: block;
+    z-index: 1;
+}
+
+div.latex {
+    display: inline-block;
+    padding: 3px;
+}
+
+div.droppable, div.draggable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.droppable {
+    display: block;
+    padding: 4px 4px;
+    line-height: 1.428571429;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+div.droppable.input {
+    min-width: 200px;
+    min-height: 40px;
+    vertical-align: middle;
+}
+
+div.droppable div.draggable {
+    cursor: not-allowed;
+}
+
+div.draggable {
+    cursor: move;
+}
+
+div.draggable.value {
+    display: inline-block;
+    min-height: 30px;
+    line-height: 21px;
+    margin: 0 5px 1px 0;
+    padding: 3px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #428bca;
+    border: 1px solid #357ebd;
+}
+
+div.draggable.value:hover {
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+select.form-control {
+    display: inline-block !important;
+}
+
+input.form-control {
+    display: inline-block;
+    text-align: center;
+}
+
+div.form-group {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+input[type=radio]:not(#calc-input), input[type=checkbox]:not(#calc-input) {
+    margin-right: 10px;
+}
+
+span.radio-text {
+    margin-left: 10px;
+}
+
+div.radio {
+    border: 1px solid #cccccc;
+}
+
+input[type=radio], input[type=checkbox] {
+    float: none !important;
+}
+
+img[name=langs] {
+    cursor: pointer;
+}
+
+.flag-icon-ua {
+    background-image: url(../img/flags/ua.svg);
+}
+
+.flag-icon-ru {
+    background-image: url(../img/flags/ru.svg);
+}
+
+.flag-icon-en {
+    background-image: url(../img/flags/en.svg);
+}
+
+.flag-icon {
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    line-height: 1em;
+    width: 80px;
+    height: 60px;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+div.trainer-progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+div.validation-alert {
+    position: fixed;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    display: none;
+}
+
+div.droppable-area.has-success {
+    background: #4caf50;
+
+    box-shadow: 0 3px 6px rgba(28, 209, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+div.droppable-area.has-error {
+    background: rgb(255, 234, 234);
+
+    box-shadow: 0 3px 6px rgba(255, 0, 0, 0.5), 0 3px 6px rgba(255, 0, 0, 0.23);
+    border: 1px solid #D20300;
+    border-radius: 5px;
+}
+
+label#radios {
+    cursor: pointer;
+    display: block;
+}
+
+.info {
+    margin: 15px 30px 0 0;
+    cursor: pointer;
+}
+
+.glyphicon-option-vertical {
+    font-size: 1.9em;
+}
+
+div.calculator {
+    display: none;
+}
+
+.rotators a {
+    padding: 6px 49px;
+    text-indent: -16px;
+    z-index: 999;
+}
+
+.rotators {
+    margin-bottom: 10px;
+}
+
+.bc-steps {
+    margin-bottom: 0 !important;
+    font-size: 14px;
+}
+
+.jumbotron {
+    padding-top: 0 !important;
+}

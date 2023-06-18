@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jTrainer :: {{TRAINER_NAME}}</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/cdn/javascripts/jtrainer/current/img/trainer/trainer-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/cdn/javascripts/jtrainer/current/img/trainer/trainer-favicon.ico" type="image/x-icon">
+
+    <script>
+        var startTime = (new Date()).getTime();
+    </script>
+    <script src="/cdn/javascripts/jtrainer/current/js/jquery.min.js"></script>
+    <script>
+        $(window).load(function () {
+            var endTime = (new Date()).getTime();
+            var secondsLoading = ((endTime - startTime) / 1000).toFixed(4);
+            $('.page-loading').append(secondsLoading + ' seconds.');
+        });
+    </script>
+    <script src="/cdn/javascripts/jtrainer/current/js/mustache.js"></script>
+    
+    
+
+    <link rel="stylesheet" href="/cdn/javascripts/jtrainer/current/css/animate.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/cdn/javascripts/jtrainer/current/css/bootstrap.min.css" type="text/css"/>
+    <script src="/cdn/javascripts/jtrainer/current/js/bootstrap.min.js"></script>
+
+    <!-- jTrainer's styles -->
+    <link rel="stylesheet" href="/cdn/javascripts/jtrainer/current/css/trainer.style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/trainer.custom.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="/javascripts/jtrainer/current/css/HistrixCalculator.css" type="text/css"/>-->
+
+    <!-- jTrainer's engine script -->
+    <script src="/cdn/javascripts/jtrainer/current/js/trainer.engine.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <div><a class="navbar-brand" href="#"><span class="trainer-brand"></span>{{TRAINER_NAME}}</a></div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-right info">
+            <div class="dropdown">
+                <button type="button" class="btn btn-link dropdown-toggle" id="menu" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true" aria-label="Option Vertical"><span
+                        class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></button>
+                <ul class="dropdown-menu" aria-labelledby="menu">
+                    <li><a href="#" data-toggle="modal" data-target="#aboutModal">About</a></li>
+                    <li><a href="#" class="page-loading text-muted"><span class="is-faded">Page generated in </span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="aboutModalLabel">About</h4>
+                        </div>
+                        <div id="aboutBody" class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="modal modal-static fade" id="cogwheel-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="/cdn/javascripts/jtrainer/current/img/trainer/trainer-cogwheel.gif" class="icon"/>
+                    <h4><span id="cogwheel-desc">Processing</span>... </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="stepspace" style="position: relative">
+    <div class="calculator" id="calculator"></div>
+    <ul class="breadcrumb bc-steps"></ul>
+    <!-- Steps will be loaded here -->
+</section>
+
+<div class="text-center animated bounceInUp">
+    <div class="btn-group btn-group-md rotators">
+        <a id="prevController" href="javascript:void(0)" class="btn btn-default col-xs-6 col-md-3">{{PREV_STEP}}</a>
+        <a class="teacher-help btn btn-warning col-xs-6 col-md-3" data-toggle="modal"
+           data-target="#helpModal">{{TEACHER_HELP}}</a>
+        <a id="endTrainer" class="btn btn-danger col-xs-6 col-md-3" data-toggle="modal" data-target="#endModal">{{END_TRAINER}}</a>
+        <a id="nextController" href="javascript:void(0)" class="btn btn-default col-xs-6 col-md-3">{{NEXT_STEP}}</a>
+    </div>
+</div>
+
+<!-- This is modal popup which shows up after click on "Teacher Help" button -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeButton"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="helpModalLabel">{{TEACHER_HELP}}</h4>
+            </div>
+            <div class="modal-body">
+                <label class="control-label">{{ENTER_HELP_TEXT}}</label>
+                <input type="text" class="form-control" id="helpInput"/>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{HELP_REQUEST_CLOSE}}</button>
+                <button type="button" class="btn btn-primary" onclick="Service.getHelpModal()">{{HELP_REQUEST_SEND}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- This is modal popup which shows up after click on "End trainer" button -->
+<div class="modal fade" id="endModal" tabindex="-1" role="dialog" aria-labelledby="endModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeButton"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="endModalLabel">{{END_TRAINER}}</h4>
+            </div>
+            <div class="modal-body">
+                <label class="control-label">{{END_ARE_YOU_SURE}}</label>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{END_TRAINER_CLOSE}}</button>
+                <button type="button" class="btn btn-primary" onclick="Service.pushResultsEarly()">
+                    {{END_TRAINER_SEND}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="progress trainer-progress-bar">
+    <div class="progress-bar"></div>
+</div>
+
+<div class="alert alert-dismissible alert-success validation-alert validation-alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ALERT_WELL_DONE}}</strong>{{ALERT_STEP_SUCCESS}}
+</div>
+<div class="alert alert-dismissible alert-danger validation-alert validation-alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ALERT_FAIL}}</strong> {{ALERT_STEP_FAIL}}
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="/cdn/javascripts/jtrainer/current/js/additions/html2canvas.js" async></script>
+<script type="text/javascript">
+    /* $("#calc").click(function () {
+     $('div.calculator').load("/javascripts/jtrainer/current/calc.html").css('display', 'block').draggable({
+     cancel: '#result'
+     });
+     });*/
+</script>

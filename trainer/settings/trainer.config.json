@@ -1,0 +1,12 @@
+{
+    "LANGUAGES": {
+		"ua": "Українська",
+        "ru": "Русский",
+        "en": "English"
+    },
+    "DEFAULT_LANG": "ua",
+    "TRAINER_SCORE": 100,
+    "TRAINER_AUTHOR": "__",
+    "COURSE_AUTHOR": "__",
+    "PRODUCTION": false
+}

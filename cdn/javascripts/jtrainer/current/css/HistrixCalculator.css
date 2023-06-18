@@ -1,0 +1,75 @@
+#myCalc {
+    position: absolute;
+    display: block;
+    z-index: 99999;
+    width: 260px;
+    height: 450px;
+    background-color: lightgrey;
+    border: 2px solid grey;
+    box-shadow: 5px 6px 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#myCalc #close {
+    width: 30px;
+    height: 30px;
+    color: darkgrey;
+    float: right;
+    font-size: 20px;
+    vertical-align: middle;
+}
+#myCalc #close:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+#myCalc #answer {
+    width: 256px;
+    height: 100px;
+    background-color: white;
+    padding-top: 30px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+#myCalc #buttons {
+    margin-left: 2px;
+}
+#myCalc #buttons a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    width: 46.4px;
+    height: 43.3px;
+    margin: 3px 2px;
+    cursor: pointer;
+}
+#myCalc #buttons a:hover {
+    background-color: #767F81;
+}
+
+#myCalc a.number {
+    background-color: white;
+    width: 63px !important;
+}
+#myCalc a.number:hover {
+    background-color: #B3C1C0 !important;
+}
+
+#myCalc a.advancedOptions, a.options {
+    background-color: #f5f5f0;
+}
+
+#myCalc a#equal {
+    width: 112.5px !important;
+}
+
+#myCalc span#expr, span#myAns {
+    font-size: 0px;
+}
